@@ -1,37 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20647" started-at="2021-09-19T00:18:28Z" finished-at="2021-09-19T00:18:49Z">
+  <suite name="Automation Test Suite" duration-ms="314" started-at="2021-09-19T19:33:08 EDT" finished-at="2021-09-19T19:33:08 EDT">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.myrunner.CucumberRunner@60dcc9fe]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="20647" started-at="2021-09-19T00:18:28Z" finished-at="2021-09-19T00:18:49Z">
-      <class name="com.testng.practice.TestWebPagee">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.testng.practice.TestWebPagee@561b6512]" name="setUp" is-config="true" duration-ms="5908" started-at="2021-09-19T00:18:28Z" finished-at="2021-09-19T00:18:34Z">
+    <test name="PMCS Login test" duration-ms="314" started-at="2021-09-19T19:33:08 EDT" finished-at="2021-09-19T19:33:08 EDT">
+      <class name="com.myrunner.CucumberRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.myrunner.CucumberRunner@60dcc9fe]" name="setUpClass" is-config="true" duration-ms="189" started-at="2021-09-19T19:33:08 EDT" finished-at="2021-09-19T19:33:08 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="getActionsOne()[pri:1, instance:com.testng.practice.TestWebPagee@561b6512]" name="getActionsOne" duration-ms="3069" started-at="2021-09-19T00:18:34Z" finished-at="2021-09-19T00:18:37Z">
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.myrunner.CucumberRunner@60dcc9fe]" name="feature" duration-ms="16" started-at="2021-09-19T19:33:08 EDT" description="Runs Cucumber Feature" data-provider="features" finished-at="2021-09-19T19:33:08 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Login function validation]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getActionsOne -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.testng.practice.TestWebPagee@561b6512]" name="tearDown" is-config="true" duration-ms="135" started-at="2021-09-19T00:18:37Z" finished-at="2021-09-19T00:18:38Z">
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.myrunner.CucumberRunner@60dcc9fe]" name="tearDownClass" is-config="true" duration-ms="19" started-at="2021-09-19T19:33:08 EDT" finished-at="2021-09-19T19:33:08 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.testng.practice.TestWebPagee@561b6512]" name="setUp" is-config="true" duration-ms="5251" started-at="2021-09-19T00:18:38Z" finished-at="2021-09-19T00:18:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="getActionsTwo()[pri:2, instance:com.testng.practice.TestWebPagee@561b6512]" name="getActionsTwo" duration-ms="6091" started-at="2021-09-19T00:18:43Z" finished-at="2021-09-19T00:18:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getActionsTwo -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.testng.practice.TestWebPagee@561b6512]" name="tearDown" is-config="true" duration-ms="157" started-at="2021-09-19T00:18:49Z" finished-at="2021-09-19T00:18:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.testng.practice.TestWebPagee -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.myrunner.CucumberRunner -->
+    </test> <!-- PMCS Login test -->
+  </suite> <!-- Automation Test Suite -->
 </testng-results>

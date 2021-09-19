@@ -7,13 +7,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<url>rm -rf ~/.m2/repository/org/slf4j/slf4j-api/1.7.25-SNAPSHOT</url>
 	<properties>
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>dd-MM-yyyy HH:mm
+		</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.test.skip>false</maven.test.skip>
-				<java.home>/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/bin/javac</java.home>
-	
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-
 	</properties>
 	<build>
 		<plugins>
@@ -30,8 +28,8 @@
 						</goals>
 						<configuration>
 							<projectName>cucumber-jvm-example</projectName>
-							<outputDirectory>${project.build.directory}/goutham-cucumber-reports</outputDirectory>
-							<cucumberOutput>${project.build.directory}/cucumber-reports</cucumberOutput>
+							<outputDirectory>${project.build.directory}/Advance-cucumber-reports</outputDirectory>
+							<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
 						</configuration>
 					</execution>
 				</executions>
@@ -53,11 +51,24 @@
 					<source>1.8</source>
 					<target>1.8</target>
 					<encoding>UTF-8</encoding>
+						<fork>true</fork>
+					<executable>/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/bin/javac</executable>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
+	<dependency>
+  <groupId>org.slf4j</groupId>
+  <artifactId>slf4j-api</artifactId>
+  <version>1.7.25</version>
+</dependency>   
+
+<dependency>
+  <groupId>org.slf4j</groupId>
+  <artifactId>slf4j-log4j12</artifactId>
+  <version>1.7.25</version>
+</dependency>  
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
@@ -128,6 +139,11 @@
 			<groupId>com.googlecode.json-simple</groupId>
 			<artifactId>json-simple</artifactId>
 			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vimalselvam</groupId>
+			<artifactId>cucumber-extentsreport</artifactId>
+			<version>2.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>net.masterthought</groupId>
@@ -205,30 +221,17 @@
 			<artifactId>file-management</artifactId>
 			<version>1.2.1</version>
 		</dependency>
-		<dependency>
+				<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>3.17</version>
+			<version>3.11</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
-			<version>3.17</version>
+			<version>3.11</version>
 		</dependency>
-			
-		<dependency>
-    <groupId>com.github.appium</groupId>
-    <artifactId>java-client</artifactId>
-    <version>7.5.1</version>
-</dependency>
-		
 	</dependencies>
-	<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-	
 </project>
-	
+
+  
