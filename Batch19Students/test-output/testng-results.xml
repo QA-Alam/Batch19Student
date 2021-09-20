@@ -1,35 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Automation Test Suite" duration-ms="314" started-at="2021-09-19T19:33:08 EDT" finished-at="2021-09-19T19:33:08 EDT">
+  <suite name="Default suite" duration-ms="2936" started-at="2021-09-19T22:22:48 EDT" finished-at="2021-09-19T22:22:51 EDT">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.myrunner.CucumberRunner@60dcc9fe]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test name="PMCS Login test" duration-ms="314" started-at="2021-09-19T19:33:08 EDT" finished-at="2021-09-19T19:33:08 EDT">
-      <class name="com.myrunner.CucumberRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.myrunner.CucumberRunner@60dcc9fe]" name="setUpClass" is-config="true" duration-ms="189" started-at="2021-09-19T19:33:08 EDT" finished-at="2021-09-19T19:33:08 EDT">
+    <test name="Default test" duration-ms="2936" started-at="2021-09-19T22:22:48 EDT" finished-at="2021-09-19T22:22:51 EDT">
+      <class name="com.testng.practice.TestNGPrioritize">
+        <test-method status="PASS" signature="getSalary()[pri:1, instance:com.testng.practice.TestNGPrioritize@5ccddd20]" name="getSalary" duration-ms="8" started-at="2021-09-19T22:22:48 EDT" finished-at="2021-09-19T22:22:48 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.myrunner.CucumberRunner@60dcc9fe]" name="feature" duration-ms="16" started-at="2021-09-19T19:33:08 EDT" description="Runs Cucumber Feature" data-provider="features" finished-at="2021-09-19T19:33:08 EDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Login function validation]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- getSalary -->
+        <test-method status="PASS" signature="getName()[pri:2, instance:com.testng.practice.TestNGPrioritize@5ccddd20]" name="getName" duration-ms="1" started-at="2021-09-19T22:22:48 EDT" finished-at="2021-09-19T22:22:48 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.myrunner.CucumberRunner@60dcc9fe]" name="tearDownClass" is-config="true" duration-ms="19" started-at="2021-09-19T19:33:08 EDT" finished-at="2021-09-19T19:33:08 EDT">
+        </test-method> <!-- getName -->
+        <test-method status="PASS" signature="getSmarttech()[pri:3, instance:com.testng.practice.TestNGPrioritize@5ccddd20]" name="getSmarttech" duration-ms="1" started-at="2021-09-19T22:22:48 EDT" finished-at="2021-09-19T22:22:48 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.myrunner.CucumberRunner -->
-    </test> <!-- PMCS Login test -->
-  </suite> <!-- Automation Test Suite -->
+        </test-method> <!-- getSmarttech -->
+        <test-method status="PASS" signature="getStudents()[pri:4, instance:com.testng.practice.TestNGPrioritize@5ccddd20]" name="getStudents" duration-ms="2878" started-at="2021-09-19T22:22:48 EDT" finished-at="2021-09-19T22:22:51 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getStudents -->
+        <test-method status="PASS" signature="getBatchNine()[pri:5, instance:com.testng.practice.TestNGPrioritize@5ccddd20]" name="getBatchNine" duration-ms="1" started-at="2021-09-19T22:22:51 EDT" finished-at="2021-09-19T22:22:51 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBatchNine -->
+      </class> <!-- com.testng.practice.TestNGPrioritize -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
