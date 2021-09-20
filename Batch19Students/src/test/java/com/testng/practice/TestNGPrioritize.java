@@ -2,13 +2,15 @@ package com.testng.practice;
 
 import org.testng.annotations.Test;
 
-public class TestNGPrioritize {
+import com.ny.basepage.SupperClass;
+
+public class TestNGPrioritize extends SupperClass{
 
 	
 	@Test(priority = 4)
 
-	public void getStudents() {
-		
+	public void getStudents() throws Throwable {
+		initialization();
 		System.out.println("I am running action method 5");
 		
 	}
@@ -41,12 +43,7 @@ public class TestNGPrioritize {
 		System.out.println("I am running action method 6");
 		
 	}
-	@Test(priority = 5)
-	public void getBatch() {
-		
-		System.out.println("I am running action method 5");
-		
-	}
+
 
 	
 }
