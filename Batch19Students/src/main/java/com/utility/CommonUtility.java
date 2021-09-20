@@ -19,6 +19,7 @@ public class CommonUtility {
 			return false;
 		}
 	}
+
 	public static void drawBorder(WebElement webelement, String color) {
 		WebElement element_node = webelement;
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
@@ -26,3 +27,4 @@ public class CommonUtility {
 
 	}
 }
+
