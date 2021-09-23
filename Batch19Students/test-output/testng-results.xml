@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2936" started-at="2021-09-19T22:22:48 EDT" finished-at="2021-09-19T22:22:51 EDT">
+  <suite name="Default suite" duration-ms="67" started-at="2021-09-20T19:47:11 EDT" finished-at="2021-09-20T19:47:11 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2936" started-at="2021-09-19T22:22:48 EDT" finished-at="2021-09-19T22:22:51 EDT">
-      <class name="com.testng.practice.TestNGPrioritize">
-        <test-method status="PASS" signature="getSalary()[pri:1, instance:com.testng.practice.TestNGPrioritize@5ccddd20]" name="getSalary" duration-ms="8" started-at="2021-09-19T22:22:48 EDT" finished-at="2021-09-19T22:22:48 EDT">
+    <test name="Default test" duration-ms="67" started-at="2021-09-20T19:47:11 EDT" finished-at="2021-09-20T19:47:11 EDT">
+      <class name="com.testng.practice.TestNGDependsOnMethod">
+        <test-method status="PASS" signature="method()[pri:0, instance:com.testng.practice.TestNGDependsOnMethod@78047b92]" name="method" duration-ms="11" started-at="2021-09-20T19:47:11 EDT" finished-at="2021-09-20T19:47:11 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getSalary -->
-        <test-method status="PASS" signature="getName()[pri:2, instance:com.testng.practice.TestNGPrioritize@5ccddd20]" name="getName" duration-ms="1" started-at="2021-09-19T22:22:48 EDT" finished-at="2021-09-19T22:22:48 EDT">
+        </test-method> <!-- method -->
+        <test-method status="PASS" signature="methodTwo()[pri:0, instance:com.testng.practice.TestNGDependsOnMethod@78047b92]" name="methodTwo" duration-ms="2" started-at="2021-09-20T19:47:11 EDT" depends-on-methods="com.testng.practice.TestNGDependsOnMethod.method" finished-at="2021-09-20T19:47:11 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getName -->
-        <test-method status="PASS" signature="getSmarttech()[pri:3, instance:com.testng.practice.TestNGPrioritize@5ccddd20]" name="getSmarttech" duration-ms="1" started-at="2021-09-19T22:22:48 EDT" finished-at="2021-09-19T22:22:48 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getSmarttech -->
-        <test-method status="PASS" signature="getStudents()[pri:4, instance:com.testng.practice.TestNGPrioritize@5ccddd20]" name="getStudents" duration-ms="2878" started-at="2021-09-19T22:22:48 EDT" finished-at="2021-09-19T22:22:51 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getStudents -->
-        <test-method status="PASS" signature="getBatchNine()[pri:5, instance:com.testng.practice.TestNGPrioritize@5ccddd20]" name="getBatchNine" duration-ms="1" started-at="2021-09-19T22:22:51 EDT" finished-at="2021-09-19T22:22:51 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getBatchNine -->
-      </class> <!-- com.testng.practice.TestNGPrioritize -->
+        </test-method> <!-- methodTwo -->
+      </class> <!-- com.testng.practice.TestNGDependsOnMethod -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

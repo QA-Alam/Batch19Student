@@ -10,7 +10,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		dryRun = false, 
 		monochrome = true, 
 		strict = false,
-		tags = { "@sanity" })
+		tags = { "@Regression " })
 public class CucumberRunner extends AbstractTestNGCucumberTests {
 
 }
