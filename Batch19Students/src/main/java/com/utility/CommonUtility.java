@@ -9,6 +9,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -131,6 +132,23 @@ public class CommonUtility {
 	}
 
 
+	// Created for generating random string for Unique email
+	public static String randomestring() {
+		String generatedString1 = RandomStringUtils.randomAlphabetic(5);
+		return (generatedString1);
+	}
+
+	// Created for generating random string for Unique email
+	public static String randomNumeric() {
+		String generatedString = RandomStringUtils.randomNumeric(10);
+		return (generatedString);
+	}
+	
+	
+	public static void main(String[] args) {
+		System.out.println("Alam"+randomestring()+"@gmail.com");
+		System.out.println("My Phone Number is : "+randomNumeric());
+	}
 
 }
 
