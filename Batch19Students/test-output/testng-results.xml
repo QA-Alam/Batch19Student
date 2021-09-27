@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="67" started-at="2021-09-20T19:47:11 EDT" finished-at="2021-09-20T19:47:11 EDT">
+  <suite name="Automation Test Suite" duration-ms="2213" started-at="2021-09-26T21:26:20 EDT" finished-at="2021-09-26T21:26:22 EDT">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.myrunner.CucumberRunner@60dcc9fe]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="67" started-at="2021-09-20T19:47:11 EDT" finished-at="2021-09-20T19:47:11 EDT">
-      <class name="com.testng.practice.TestNGDependsOnMethod">
-        <test-method status="PASS" signature="method()[pri:0, instance:com.testng.practice.TestNGDependsOnMethod@78047b92]" name="method" duration-ms="11" started-at="2021-09-20T19:47:11 EDT" finished-at="2021-09-20T19:47:11 EDT">
+    <test name="Zoopla Login test" duration-ms="2213" started-at="2021-09-26T21:26:20 EDT" finished-at="2021-09-26T21:26:22 EDT">
+      <class name="com.myrunner.CucumberRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.myrunner.CucumberRunner@60dcc9fe]" name="setUpClass" is-config="true" duration-ms="191" started-at="2021-09-26T21:26:20 EDT" finished-at="2021-09-26T21:26:20 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- method -->
-        <test-method status="PASS" signature="methodTwo()[pri:0, instance:com.testng.practice.TestNGDependsOnMethod@78047b92]" name="methodTwo" duration-ms="2" started-at="2021-09-20T19:47:11 EDT" depends-on-methods="com.testng.practice.TestNGDependsOnMethod.method" finished-at="2021-09-20T19:47:11 EDT">
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.myrunner.CucumberRunner@60dcc9fe]" name="feature" duration-ms="1919" started-at="2021-09-26T21:26:21 EDT" description="Runs Cucumber Feature" data-provider="features" finished-at="2021-09-26T21:26:22 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User able to login with valid username & password]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- methodTwo -->
-      </class> <!-- com.testng.practice.TestNGDependsOnMethod -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.myrunner.CucumberRunner@60dcc9fe]" name="tearDownClass" is-config="true" duration-ms="9" started-at="2021-09-26T21:26:22 EDT" finished-at="2021-09-26T21:26:22 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.myrunner.CucumberRunner -->
+    </test> <!-- Zoopla Login test -->
+  </suite> <!-- Automation Test Suite -->
 </testng-results>

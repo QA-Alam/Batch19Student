@@ -6,11 +6,12 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 		plugin= {"pretty","json:target/cucumber.json" }, 
 		features = { ".//Fetatures/" }, 
-		glue = "com.stepdefinations", 
+        glue = {"com.stepdefinations"}, 	
 		dryRun = false, 
 		monochrome = true, 
 		strict = false,
-		tags = { "@Regression " })
+		tags = {"@Smoke"})
+
 public class CucumberRunner extends AbstractTestNGCucumberTests {
 
 }

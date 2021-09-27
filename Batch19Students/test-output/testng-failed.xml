@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Automation Test Suite]">
+  <test thread-count="5" name="Zoopla Login test(failed)">
     <classes>
-      <class name="com.testng.practice.TestNGDependsOnMethod">
+      <class name="com.myrunner.CucumberRunner">
         <methods>
-          <include name="methodTwo"/>
-          <include name="method"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- com.testng.practice.TestNGDependsOnMethod -->
+      </class> <!-- com.myrunner.CucumberRunner -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Zoopla Login test(failed) -->
+</suite> <!-- Failed suite [Automation Test Suite] -->
