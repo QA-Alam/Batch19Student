@@ -34,13 +34,14 @@ public class LoginStepDef extends SupperClass {
 	}
 
 	@When("^User enter the userName \"([^\"]*)\" and password \"([^\"]*)\"$")
-	public void user_enter_the_userName_and_password(String userName, String Pwd) {
+	public void user_enter_the_userName_and_password(String userName, String Pwd) throws Exception {
 		WaitHelper.waitForElement(pf.getEnterUserName(), 20);
 		CommonUtility.highLighterMethod(driver, pf.getEnterUserName());
 		pf.getEnterUserName().sendKeys(userName);
 		WaitHelper.waitForElement(pf.getEnterPassword(), 20);
 		CommonUtility.highLighterMethod(driver, pf.getEnterPassword());
 		pf.getEnterPassword().sendKeys(Pwd);
+		
 	}
 
 	@When("^User click on the signing button$")

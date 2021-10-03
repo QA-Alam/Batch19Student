@@ -1,9 +1,15 @@
 package com.listener;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -62,16 +68,25 @@ public class TestListener implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 		logger = extent.createTest(result.getName()); // create new entry in th report
 		logger.log(Status.FAIL, MarkupHelper.createLabel(result.getName(), ExtentColor.RED)); // send the passed
-																								// information
-																								// to the report with
-																								// GREEN // color
-																								// highlighted
-		try {
-			CommonUtility.captureScreenShot(driver, "failedTestCases");
-		} catch (Exception e) {
-			e.printStackTrace();
+		// using ITestResult.FAILURE is equals to result.getStatus then it enter into if
+		// condition
+		if (ITestResult.FAILURE == result.getStatus()) {
+			try {
+				// To create reference of TakesScreenshot
+				TakesScreenshot screenshot = (TakesScreenshot) driver;
+				// Call method to capture screenshot
+				File src = screenshot.getScreenshotAs(OutputType.FILE);
+				// Copy files to specific location
+				// result.getName() will return name of test case so that screenshot name will
+				// be same as test case name
+				FileUtils.copyFile(src, new File("./Screenshots/" + result.getName() + ".png"));
+				System.out.println("Successfully captured a screenshot");
+			} catch (Exception e) {
+				System.out.println("Exception while taking screenshot " + e.getMessage());
+			}
+
 		}
-	}
+	} 
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
