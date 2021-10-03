@@ -21,7 +21,7 @@ public class SupperClass {
 	public static Logger logger;
 	public static WebDriver driver;
 	public static Properties prop;
-	public Properties configProp;
+
 
 	public WebDriver getDriver() {
 		return driver;
@@ -33,8 +33,7 @@ public class SupperClass {
 
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(
-					System.getProperty("user.dir") + "/src/main/java/com/usa/config/Config.properties");
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/com/usa/config/Config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -43,7 +42,8 @@ public class SupperClass {
 		}
 	}
 
-	public static void initialization() {
+	
+	public static void initialization() { // setUP();	
 		String browserName = prop.getProperty("browser");
 		
 		if (browserName.equals("chrome")) {
@@ -51,12 +51,14 @@ public class SupperClass {
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("mac"));
 			driver = new ChromeDriver();
 
-		} else if (browserName.equals("browser")) {
+		} else if (browserName.equals("chrome")) {
 			logger.info("******** I am a chrome browser*********");
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("windows"));
 			driver = new ChromeDriver();
 
-		} else if (browserName.equals("headless")) {
+		} 
+		
+		else if (browserName.equals("headless")) {
 			logger.info("******** I am a headless mode chrome browser*********");
 			String chromeDriverPath = prop.getProperty("mac");
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
@@ -91,8 +93,9 @@ public class SupperClass {
 
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get(prop.getProperty("URL"));
+		//driver.get(prop.getProperty("URL"));
 
 	}
-
+  
 }
+	

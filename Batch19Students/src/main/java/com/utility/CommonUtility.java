@@ -35,12 +35,11 @@ public class CommonUtility {
 		}
 	}
 
-	public static void drawBorder(WebElement webelement, String color) {
-		WebElement element_node = webelement;
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("arguments[0].style.border='3px solid " + color + "'", element_node);
-
-	}
+	public static void highLighterMethod(WebDriver driver, WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
+}
+	
 	public static String captureScreenShot(WebDriver driver, String ScreenShotName) throws Exception {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
@@ -149,6 +148,10 @@ public class CommonUtility {
 		System.out.println("Alam"+randomestring()+"@gmail.com");
 		System.out.println("My Phone Number is : "+randomNumeric());
 	}
-
+	public static void acctionClick(WebElement webElement ) {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(webElement).click().build().perform();
+		
+	}
 }
 
