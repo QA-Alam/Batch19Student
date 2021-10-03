@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Automation Test Suite"> 
 	<listeners>
-		<listener class-name="com.listener.Reporting" />
+		<listener class-name="com.listener.TestListener" />
 	</listeners> 
 	<test name="Zoopla Login test">
 		<classes>
