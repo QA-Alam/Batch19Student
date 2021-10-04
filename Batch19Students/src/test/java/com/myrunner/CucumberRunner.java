@@ -4,8 +4,8 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
-		//plugin= {"pretty","json:target/cucumber.json" },		
-		plugin= {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" },
+		plugin= {"pretty","json:target/cucumber.json" },		
+		//plugin= {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" },
 		//format ="",		
 		features = { ".//Fetatures/" }, 
         glue = {"com.stepdefinations"}, 	
